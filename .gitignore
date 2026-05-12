@@ -28,6 +28,10 @@ pytest_cache/
 .DS_Store
 Thumbs.db
 
+# Upstream training repo (install separately if needed):
+#   git clone https://github.com/haoheliu/AudioLDM-training-finetuning.git
+/AudioLDM-training-finetuning-main/
+
 # Data & Outputs
 /data/
 /datasets/

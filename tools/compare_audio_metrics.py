@@ -73,6 +73,7 @@ def main():
     ap.add_argument('--n-fft', type=int, default=1024)
     ap.add_argument('--hop', type=int, default=256)
     ap.add_argument('--n-mels', type=int, default=128)
+    ap.add_argument('--out-json', type=str, default=None, help='If set, also write metrics dict to this path')
     args = ap.parse_args()
 
     ref_path = Path(args.ref)
@@ -119,7 +120,12 @@ def main():
     min_mel_frames = min(ref_mel.shape[1], test_mel.shape[1])
     ref_mel = ref_mel[:, :min_mel_frames]
     test_mel = test_mel[:, :min_mel_frames]
-    mel_mae_db = float(torch.mean((ref_mel - test_mel).abs()).item())
+    mel_diff_db = (ref_mel - test_mel).abs()
+    mel_mae_db = float(torch.mean(mel_diff_db).item())
+    n_m = ref_mel.shape[0]
+    split = max(1, n_m // 3)
+    mel_mae_low_db = float(torch.mean(mel_diff_db[:split, :]).item())
+    mel_mae_high_db = float(torch.mean(mel_diff_db[split:, :]).item())
 
     # Spectral centroid
     ref_centroid = spectral_centroid(ref_wav, sr, args.n_fft, args.hop)
@@ -138,13 +144,19 @@ def main():
         'pearson_corr': corr,
         'stft_mag_mse': stft_mse,
         'mel_db_mae': mel_mae_db,
+        'mel_db_mae_low_band': mel_mae_low_db,
+        'mel_db_mae_high_band': mel_mae_high_db,
         'spectral_centroid_l1': centroid_l1,
         'n_fft': args.n_fft,
         'hop': args.hop,
         'n_mels': args.n_mels,
     }
 
-    print(json.dumps(metrics, indent=2))
+    text = json.dumps(metrics, indent=2)
+    print(text)
+    if args.out_json:
+        Path(args.out_json).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.out_json).write_text(text, encoding='utf-8')
 
 
 if __name__ == '__main__':

@@ -38,6 +38,10 @@ Thumbs.db
 step_1_training_matched_vae_reconstruction_fixed/
 # Experiment outputs / reports
 runs/
+# Stable Audio sandbox — keep local only; not part of DDCM_AudioLDM2 repo
+/stable_audio_lab/
+# Stable Audio phase-1 outputs (separate from DDCM runs/)
+/runs_stable_audio/
 archive/
 backup/
 temp_pkgs/
@@ -52,7 +56,9 @@ ddcm_experiments/routeA_runs/
 *.mp3
 *.m4a
 
-# Model files / weights
+# Large local weights / bitstreams (do not commit)
+clap_vggish_*.npz
+/ddcm_experiments/routeB_runs/
 *.pt
 *.ckpt
 *.safetensors

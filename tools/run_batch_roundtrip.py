@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import shutil
 import statistics as stats
 import subprocess
 from pathlib import Path
@@ -38,9 +39,21 @@ def main():
         default=None,
         help="Title for --aggregate-md (default: derived from output-dir name)",
     )
-    ap.add_argument("--python", type=str, default=os.environ.get("DDCM_PYTHON", "/home/wang/miniconda3/envs/ddcm/bin/python"))
+    ap.add_argument(
+        "--python",
+        type=str,
+        default=os.environ.get("DDCM_PYTHON", shutil.which("python3") or "python3"),
+        help="Interpreter for audio_compression subprocess (override with DDCM_PYTHON).",
+    )
     ap.add_argument("--skip-existing", action="store_true", help="Skip roundtrip if decomp wav already exists")
-    ap.add_argument("--hf-hub-cache", type=str, default=os.environ.get("HUGGINGFACE_HUB_CACHE", "/home/wang/.cache/huggingface/hub"))
+    ap.add_argument(
+        "--hf-hub-cache",
+        type=str,
+        default=os.environ.get(
+            "HUGGINGFACE_HUB_CACHE",
+            str(Path.home() / ".cache" / "huggingface" / "hub"),
+        ),
+    )
 
     ap.add_argument("-T", dest="T", type=int, default=999)
     ap.add_argument("-K", dest="K", type=int, default=1000)

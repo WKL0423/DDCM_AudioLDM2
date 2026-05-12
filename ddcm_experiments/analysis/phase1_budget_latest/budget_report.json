@@ -1,0 +1,177 @@
+{
+  "budgets": [
+    2560,
+    8192,
+    20480
+  ],
+  "baseline_metrics_path": "/home/wang/work/DDCM_Audio/runs/baseline/piano_t10k16_metrics.json",
+  "candidates_total_piano_only": 13,
+  "candidates_known_payload": 13,
+  "candidates_excluded_non_piano": 7,
+  "tiers": [
+    {
+      "max_payload_bytes": 2560,
+      "top": []
+    },
+    {
+      "max_payload_bytes": 8192,
+      "top": [
+        {
+          "source": "quality_push_large_codebook",
+          "name": "runs/T=20_in999-0_K=32_P=1_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.011221757158637047,
+          "snr_db": -7.93353188239863,
+          "mel_db_mae": 38.681034088134766,
+          "bitstream_total_bytes": 4645,
+          "bitstream_json_bytes": 4632,
+          "bitstream_bin_bytes": 13,
+          "ratio_vs_orig": 68.90075349838536,
+          "delta_corr_vs_baseline": 0.008628085255622864,
+          "delta_mel_db_mae_vs_baseline": -5.615840911865234,
+          "delta_snr_db_vs_baseline": 0.37533691630043453
+        },
+        {
+          "source": "ablation_step2",
+          "name": "runs/T=20_in999-0_K=32_P=1_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.011221757158637047,
+          "snr_db": -7.93353188239863,
+          "mel_db_mae": 38.681034088134766,
+          "bitstream_total_bytes": 4645,
+          "bitstream_json_bytes": 4632,
+          "bitstream_bin_bytes": 13,
+          "ratio_vs_orig": 68.90075349838536,
+          "delta_corr_vs_baseline": 0.008628085255622864,
+          "delta_mel_db_mae_vs_baseline": -5.615840911865234,
+          "delta_snr_db_vs_baseline": 0.37533691630043453
+        },
+        {
+          "source": "quality_push_large_codebook",
+          "name": "runs/T=20_in999-0_K=32_P=2_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.00687688123434782,
+          "snr_db": -9.54359701311034,
+          "mel_db_mae": 34.78822708129883,
+          "bitstream_total_bytes": 5556,
+          "bitstream_json_bytes": 5543,
+          "bitstream_bin_bytes": 13,
+          "ratio_vs_orig": 57.6033117350612,
+          "delta_corr_vs_baseline": 0.004283209331333637,
+          "delta_mel_db_mae_vs_baseline": -9.508647918701172,
+          "delta_snr_db_vs_baseline": -1.234728214411275
+        },
+        {
+          "source": "ablation_step2",
+          "name": "runs/T=20_in999-0_K=32_P=2_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.00687688123434782,
+          "snr_db": -9.54359701311034,
+          "mel_db_mae": 34.78822708129883,
+          "bitstream_total_bytes": 5556,
+          "bitstream_json_bytes": 5543,
+          "bitstream_bin_bytes": 13,
+          "ratio_vs_orig": 57.6033117350612,
+          "delta_corr_vs_baseline": 0.004283209331333637,
+          "delta_mel_db_mae_vs_baseline": -9.508647918701172,
+          "delta_snr_db_vs_baseline": -1.234728214411275
+        },
+        {
+          "source": "quality_push_large_codebook",
+          "name": "runs/T=10_in999-0_K=16_P=1_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.002593671903014183,
+          "snr_db": -8.308868798699065,
+          "mel_db_mae": 44.296875,
+          "bitstream_total_bytes": 2971,
+          "bitstream_json_bytes": 2966,
+          "bitstream_bin_bytes": 5,
+          "ratio_vs_orig": 107.722652305621,
+          "delta_corr_vs_baseline": 0.0,
+          "delta_mel_db_mae_vs_baseline": 0.0,
+          "delta_snr_db_vs_baseline": 0.0
+        }
+      ]
+    },
+    {
+      "max_payload_bytes": 20480,
+      "top": [
+        {
+          "source": "quality_push_large_codebook",
+          "name": "runs/T=20_in999-0_K=32_P=1_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.011221757158637047,
+          "snr_db": -7.93353188239863,
+          "mel_db_mae": 38.681034088134766,
+          "bitstream_total_bytes": 4645,
+          "bitstream_json_bytes": 4632,
+          "bitstream_bin_bytes": 13,
+          "ratio_vs_orig": 68.90075349838536,
+          "delta_corr_vs_baseline": 0.008628085255622864,
+          "delta_mel_db_mae_vs_baseline": -5.615840911865234,
+          "delta_snr_db_vs_baseline": 0.37533691630043453
+        },
+        {
+          "source": "ablation_step2",
+          "name": "runs/T=20_in999-0_K=32_P=1_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.011221757158637047,
+          "snr_db": -7.93353188239863,
+          "mel_db_mae": 38.681034088134766,
+          "bitstream_total_bytes": 4645,
+          "bitstream_json_bytes": 4632,
+          "bitstream_bin_bytes": 13,
+          "ratio_vs_orig": 68.90075349838536,
+          "delta_corr_vs_baseline": 0.008628085255622864,
+          "delta_mel_db_mae_vs_baseline": -5.615840911865234,
+          "delta_snr_db_vs_baseline": 0.37533691630043453
+        },
+        {
+          "source": "quality_push_large_codebook",
+          "name": "runs/T=20_in999-0_K=32_P=2_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.00687688123434782,
+          "snr_db": -9.54359701311034,
+          "mel_db_mae": 34.78822708129883,
+          "bitstream_total_bytes": 5556,
+          "bitstream_json_bytes": 5543,
+          "bitstream_bin_bytes": 13,
+          "ratio_vs_orig": 57.6033117350612,
+          "delta_corr_vs_baseline": 0.004283209331333637,
+          "delta_mel_db_mae_vs_baseline": -9.508647918701172,
+          "delta_snr_db_vs_baseline": -1.234728214411275
+        },
+        {
+          "source": "ablation_step2",
+          "name": "runs/T=20_in999-0_K=32_P=2_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.00687688123434782,
+          "snr_db": -9.54359701311034,
+          "mel_db_mae": 34.78822708129883,
+          "bitstream_total_bytes": 5556,
+          "bitstream_json_bytes": 5543,
+          "bitstream_bin_bytes": 13,
+          "ratio_vs_orig": 57.6033117350612,
+          "delta_corr_vs_baseline": 0.004283209331333637,
+          "delta_mel_db_mae_vs_baseline": -9.508647918701172,
+          "delta_snr_db_vs_baseline": -1.234728214411275
+        },
+        {
+          "source": "quality_push_large_codebook",
+          "name": "runs/T=10_in999-0_K=16_P=1_CB=3_model=audioldm2-music_audio",
+          "audio_stem": "piano",
+          "corr": 0.002593671903014183,
+          "snr_db": -8.308868798699065,
+          "mel_db_mae": 44.296875,
+          "bitstream_total_bytes": 2971,
+          "bitstream_json_bytes": 2966,
+          "bitstream_bin_bytes": 5,
+          "ratio_vs_orig": 107.722652305621,
+          "delta_corr_vs_baseline": 0.0,
+          "delta_mel_db_mae_vs_baseline": 0.0,
+          "delta_snr_db_vs_baseline": 0.0
+        }
+      ]
+    }
+  ]
+}

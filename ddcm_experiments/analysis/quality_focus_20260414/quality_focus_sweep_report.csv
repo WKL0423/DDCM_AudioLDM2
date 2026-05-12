@@ -1,0 +1,6 @@
+rank,source,name,corr,snr_db,mel_db_mae,bitstream_total_bytes,ratio_vs_orig,delta_corr_vs_baseline,delta_mel_db_mae_vs_baseline,delta_snr_db_vs_baseline
+1,quality_push_large_codebook,runs/T=120_in999-0_K=256_P=1_CB=3_model=audioldm2-music_audio,0.036737919,-0.008837294,8.015702248,21768,14.70249908122014,0.034144247,-36.281172752,8.300031505
+2,quality_push_large_codebook,runs/T=20_in999-0_K=32_P=1_CB=3_model=audioldm2-music_audio,0.011221757,-7.933531882,38.681034088,4645,68.90075349838536,0.008628085,-5.615840912,0.375336916
+3,ablation_step2,runs/T=20_in999-0_K=32_P=1_CB=3_model=audioldm2-music_audio,0.011221757,-7.933531882,38.681034088,4645,68.90075349838536,0.008628085,-5.615840912,0.375336916
+4,quality_push_large_codebook,runs/T=20_in999-0_K=32_P=2_CB=3_model=audioldm2-music_audio,0.006876881,-9.543597013,34.788227081,5556,57.6033117350612,0.004283209,-9.508647919,-1.234728214
+5,ablation_step2,runs/T=20_in999-0_K=32_P=2_CB=3_model=audioldm2-music_audio,0.006876881,-9.543597013,34.788227081,5556,57.6033117350612,0.004283209,-9.508647919,-1.234728214

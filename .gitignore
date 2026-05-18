@@ -51,6 +51,8 @@ backup/
 temp_pkgs/
 # Experiment run dirs (large wavs/json); written summaries live in ddcm_experiments/analysis/
 ddcm_experiments/routeA_runs/
+ddcm_experiments/ab_session_templates/
+/evaluation_results/
 # Keep plots if desired; comment out next line if you want to track images
 # *.png
 
